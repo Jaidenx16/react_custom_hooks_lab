@@ -1,5 +1,32 @@
 # Lab: Form Storage
 
+## Completed Application
+
+This React app saves the name and service number fields in the browser's local
+storage. Refreshing the page restores both values. The welcome message updates
+as you type your name.
+
+The `useLocalStorage(key, initialValue)` hook returns a value and its setter. It
+reads the saved text when the component loads and uses an effect to save changes.
+The form uses the keys `"name"` and `"serviceNumber"`.
+
+### Run Locally
+
+```sh
+npm install
+npm run dev
+```
+
+Open the local URL shown in the terminal. Enter a name and service number, then
+refresh to check that both fields keep their values. Clearing a field also saves
+the empty value.
+
+### Run Tests
+
+```sh
+npm run test -- --run
+```
+
 ## Overview  
 Now that we’ve covered the basics of creating custom hooks, let’s use our skills to implement a popular feature when it comes to user convenience. You are working with a repair company and you want the user to be able to keep the inputted form data between refreshes. They don’t want to store it within a `db.json` file as that is less secure, however, we can use the user's local storage to store the data and create a custom hook in order to manipulate the local storage.
 
